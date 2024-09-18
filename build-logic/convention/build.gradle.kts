@@ -4,6 +4,7 @@ plugins {
     `kotlin-dsl`
     `java-library`
     `maven-publish`
+    alias(libs.plugins.dependency.guard)
 }
 
 group = "io.github.u1tramarinet.gradleplugins.buildlogic"
@@ -47,5 +48,12 @@ afterEvaluate {
                 version = "1.0.0"
             }
         }
+    }
+}
+
+dependencyGuard {
+    configuration("runtimeClasspath") {
+        tree = true
+        modules = true
     }
 }
