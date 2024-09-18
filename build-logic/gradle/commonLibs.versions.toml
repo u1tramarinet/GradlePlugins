@@ -1,0 +1,12 @@
+[versions]
+appMajor = "0"
+appMinor = "0"
+appPatch = "2"
+composeBom = "2024.04.01"
+
+[libraries]
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+[plugins]
+
+
